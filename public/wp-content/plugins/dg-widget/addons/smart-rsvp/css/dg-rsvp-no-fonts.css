@@ -1,0 +1,17 @@
+/**
+ * DG RSVP - Font Override for Production
+ * Disable all icon font loading to prevent console errors
+ * Version: 2.5.13
+ */
+
+/* Disable all icon fonts - prevent 404 errors */
+[class*=" dg-rsvpo-"],
+[class^=dg-rsvpo-] {
+    font-family: inherit !important;
+}
+
+/* Ensure icons still display using CSS content */
+[class*=" dg-rsvpo-"]:before,
+[class^=dg-rsvpo-]:before {
+    font-family: inherit;
+}

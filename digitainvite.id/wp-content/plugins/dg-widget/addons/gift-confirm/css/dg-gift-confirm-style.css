@@ -1,0 +1,419 @@
+/*------------------------------------------------------------------*/
+/*-------------------------->>> General <<<-------------------------*/
+/*------------------------------------------------------------------*/
+.dg-gift-confirm-wrapper *,
+.dg-gift-confirm-wrapper *:before,
+.dg-gift-confirm-wrapper *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.dg-gift-confirm-wrapper {
+    min-width: 180px;
+    width: 100%;
+    background: #F5F7FA;
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 16px;
+    padding: 20px;
+}
+
+.dg-gift-confirm-wrapper.dg-gift-confirm-border {
+    border: 1px solid #d5deea;
+    border-radius: 10px;
+}
+
+/*------------------------------------------------------------------*/
+/*-------------------------->>> Form <<<----------------------------*/
+/*------------------------------------------------------------------*/
+.dg-gift-confirm-wrapper .dg-gift-confirm-wrap-form {
+    position: relative;
+    width: 100%;
+}
+
+.dg-gift-confirm-wrapper .dg-gift-confirm-container-form {
+    position: relative;
+    width: 100%;
+}
+
+.dg-gift-confirm-wrapper .dg-gift-confirm-respond {
+    margin: 0;
+    padding: 0;
+}
+
+.dg-gift-confirm-wrapper .dg-gift-confirm-form {
+    margin: 0;
+    padding: 0;
+}
+
+/*------------------------------------------------------------------*/
+/*-------------------------->>> Fields <<<--------------------------*/
+/*------------------------------------------------------------------*/
+.dg-gift-confirm-wrapper .dg-gift-confirm-field {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.dg-gift-confirm-wrapper .dg-gift-confirm-field label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #44525F;
+    font-size: 0.9em;
+}
+
+.dg-gift-confirm-wrapper .dg-gift-confirm-input,
+.dg-gift-confirm-wrapper .dg-gift-confirm-textarea,
+.dg-gift-confirm-wrapper .dg-gift-confirm-select {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #d5deea;
+    border-radius: 8px;
+    background: #FFFFFF;
+    color: #44525F;
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 1em;
+    line-height: 1.5;
+    box-shadow: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease;
+}
+
+.dg-gift-confirm-wrapper .dg-gift-confirm-input:focus,
+.dg-gift-confirm-wrapper .dg-gift-confirm-textarea:focus,
+.dg-gift-confirm-wrapper .dg-gift-confirm-select:focus {
+    border-color: #64B6EC;
+    outline: none;
+}
+
+.dg-gift-confirm-wrapper .dg-gift-confirm-textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+.dg-gift-confirm-wrapper .dg-gift-confirm-select {
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%2344525F' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    padding-right: 40px;
+}
+
+/*------------------------------------------------------------------*/
+/*-------------------------->>> Button <<<--------------------------*/
+/*------------------------------------------------------------------*/
+.dg-gift-confirm-wrapper .dg-gift-confirm-field-submit {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.dg-gift-confirm-wrapper .dg-gift-confirm-submit {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #3D7DBC;
+    color: #FFFFFF;
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 1em;
+    font-weight: 600;
+    text-align: center;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.dg-gift-confirm-wrapper .dg-gift-confirm-submit:hover {
+    background: #4d8ac5;
+}
+
+.dg-gift-confirm-wrapper .dg-gift-confirm-submit:disabled {
+    background: #95b8d9;
+    cursor: not-allowed;
+}
+
+/*------------------------------------------------------------------*/
+/*-------------------------->>> Status <<<--------------------------*/
+/*------------------------------------------------------------------*/
+.dg-gift-confirm-wrapper .dg-gift-confirm-status {
+    display: none;
+    margin-top: 15px;
+    padding: 12px 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.dg-gift-confirm-wrapper .dg-gift-confirm-status.dg-gift-confirm-loading {
+    display: block;
+    background: #f0f4f8;
+}
+
+.dg-gift-confirm-wrapper .dg-gift-confirm-status .dg-gift-confirm-success {
+    margin: 0;
+    padding: 0;
+    color: #27ae60;
+    font-weight: 600;
+}
+
+.dg-gift-confirm-wrapper .dg-gift-confirm-status .dg-gift-confirm-error {
+    margin: 0;
+    padding: 0;
+    color: #e74c3c;
+    font-weight: 600;
+}
+
+/* Success message with green border and text */
+.dg-gift-confirm-wrapper .dg-gift-confirm-status.dg-gift-confirm-message-success {
+    display: block;
+    border: 2px solid #2ecc71;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #f0f9f4;
+}
+
+.dg-gift-confirm-wrapper .dg-gift-confirm-status.dg-gift-confirm-message-success .dg-gift-confirm-success {
+    color: #2ecc71;
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+}
+
+/* Error message with red border and text */
+.dg-gift-confirm-wrapper .dg-gift-confirm-status.dg-gift-confirm-message-error {
+    display: block;
+    border: 2px solid #e74c3c;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #fef5f5;
+}
+
+.dg-gift-confirm-wrapper .dg-gift-confirm-status.dg-gift-confirm-message-error .dg-gift-confirm-error {
+    color: #e74c3c;
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+}
+
+/* Spinner */
+.dg-gift-confirm-wrapper .dg-gift-confirm-spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #d5deea;
+    border-radius: 50%;
+    border-top-color: #3D7DBC;
+    animation: dg-gift-confirm-spin 1s linear infinite;
+}
+
+@keyframes dg-gift-confirm-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/*------------------------------------------------------------------*/
+/*----------------------->>> Placeholder <<<------------------------*/
+/*------------------------------------------------------------------*/
+.dg-gift-confirm-wrapper ::-webkit-input-placeholder {
+    color: #95a5a6;
+}
+
+.dg-gift-confirm-wrapper :-moz-placeholder {
+    color: #95a5a6;
+}
+
+.dg-gift-confirm-wrapper ::-moz-placeholder {
+    color: #95a5a6;
+}
+
+.dg-gift-confirm-wrapper :-ms-input-placeholder {
+    color: #95a5a6;
+}
+
+.dg-gift-confirm-wrapper ::placeholder {
+    color: #95a5a6;
+}
+
+/*------------------------------------------------------------------*/
+/*----------------------->>> Theme: Facebook <<<--------------------*/
+/*------------------------------------------------------------------*/
+.dg-gift-confirm-wrapper.dg-gift-confirm-facebook {
+    background: #F5F7FA;
+}
+
+.dg-gift-confirm-wrapper.dg-gift-confirm-facebook.dg-gift-confirm-border {
+    border-color: #d5deea;
+}
+
+.dg-gift-confirm-wrapper.dg-gift-confirm-facebook .dg-gift-confirm-field label {
+    color: #44525F;
+}
+
+.dg-gift-confirm-wrapper.dg-gift-confirm-facebook .dg-gift-confirm-input,
+.dg-gift-confirm-wrapper.dg-gift-confirm-facebook .dg-gift-confirm-textarea,
+.dg-gift-confirm-wrapper.dg-gift-confirm-facebook .dg-gift-confirm-select {
+    background: #FFFFFF;
+    border-color: #d5deea;
+    color: #44525F;
+}
+
+.dg-gift-confirm-wrapper.dg-gift-confirm-facebook .dg-gift-confirm-submit {
+    background: #3D7DBC;
+    color: #FFFFFF;
+}
+
+.dg-gift-confirm-wrapper.dg-gift-confirm-facebook .dg-gift-confirm-submit:hover {
+    background: #4d8ac5;
+}
+
+/*------------------------------------------------------------------*/
+/*----------------------->>> Theme: Golden <<<----------------------*/
+/*------------------------------------------------------------------*/
+.dg-gift-confirm-wrapper.dg-gift-confirm-golden {
+    background: linear-gradient(135deg, #f5f0e6 0%, #e8dcc8 100%);
+}
+
+.dg-gift-confirm-wrapper.dg-gift-confirm-golden.dg-gift-confirm-border {
+    border-color: #d4c4a8;
+}
+
+.dg-gift-confirm-wrapper.dg-gift-confirm-golden .dg-gift-confirm-field label {
+    color: #8b7355;
+}
+
+.dg-gift-confirm-wrapper.dg-gift-confirm-golden .dg-gift-confirm-input,
+.dg-gift-confirm-wrapper.dg-gift-confirm-golden .dg-gift-confirm-textarea,
+.dg-gift-confirm-wrapper.dg-gift-confirm-golden .dg-gift-confirm-select {
+    background: rgba(255, 255, 255, 0.9);
+    border-color: #d4c4a8;
+    color: #5c4d3a;
+}
+
+.dg-gift-confirm-wrapper.dg-gift-confirm-golden .dg-gift-confirm-input:focus,
+.dg-gift-confirm-wrapper.dg-gift-confirm-golden .dg-gift-confirm-textarea:focus,
+.dg-gift-confirm-wrapper.dg-gift-confirm-golden .dg-gift-confirm-select:focus {
+    border-color: #b8a078;
+}
+
+.dg-gift-confirm-wrapper.dg-gift-confirm-golden .dg-gift-confirm-submit {
+    background: linear-gradient(135deg, #c9a962 0%, #a88a3d 100%);
+    color: #FFFFFF;
+}
+
+.dg-gift-confirm-wrapper.dg-gift-confirm-golden .dg-gift-confirm-submit:hover {
+    background: linear-gradient(135deg, #d4b66f 0%, #b8984a 100%);
+}
+
+/*------------------------------------------------------------------*/
+/*----------------------->>> Theme: Dark <<<------------------------*/
+/*------------------------------------------------------------------*/
+.dg-gift-confirm-wrapper.dg-gift-confirm-dark {
+    background: linear-gradient(135deg, #2c3e50 0%, #1a252f 100%);
+}
+
+.dg-gift-confirm-wrapper.dg-gift-confirm-dark.dg-gift-confirm-border {
+    border-color: #34495e;
+}
+
+.dg-gift-confirm-wrapper.dg-gift-confirm-dark .dg-gift-confirm-field label {
+    color: #bdc3c7;
+}
+
+.dg-gift-confirm-wrapper.dg-gift-confirm-dark .dg-gift-confirm-input,
+.dg-gift-confirm-wrapper.dg-gift-confirm-dark .dg-gift-confirm-textarea,
+.dg-gift-confirm-wrapper.dg-gift-confirm-dark .dg-gift-confirm-select {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #34495e;
+    color: #ecf0f1;
+}
+
+.dg-gift-confirm-wrapper.dg-gift-confirm-dark .dg-gift-confirm-input:focus,
+.dg-gift-confirm-wrapper.dg-gift-confirm-dark .dg-gift-confirm-textarea:focus,
+.dg-gift-confirm-wrapper.dg-gift-confirm-dark .dg-gift-confirm-select:focus {
+    border-color: #3498db;
+}
+
+.dg-gift-confirm-wrapper.dg-gift-confirm-dark .dg-gift-confirm-select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23ecf0f1' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+}
+
+.dg-gift-confirm-wrapper.dg-gift-confirm-dark ::-webkit-input-placeholder {
+    color: #7f8c8d;
+}
+
+.dg-gift-confirm-wrapper.dg-gift-confirm-dark :-moz-placeholder {
+    color: #7f8c8d;
+}
+
+.dg-gift-confirm-wrapper.dg-gift-confirm-dark ::-moz-placeholder {
+    color: #7f8c8d;
+}
+
+.dg-gift-confirm-wrapper.dg-gift-confirm-dark :-ms-input-placeholder {
+    color: #7f8c8d;
+}
+
+.dg-gift-confirm-wrapper.dg-gift-confirm-dark ::placeholder {
+    color: #7f8c8d;
+}
+
+.dg-gift-confirm-wrapper.dg-gift-confirm-dark .dg-gift-confirm-submit {
+    background: #3498db;
+    color: #FFFFFF;
+}
+
+.dg-gift-confirm-wrapper.dg-gift-confirm-dark .dg-gift-confirm-submit:hover {
+    background: #2980b9;
+}
+
+.dg-gift-confirm-wrapper.dg-gift-confirm-dark .dg-gift-confirm-status {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.dg-gift-confirm-wrapper.dg-gift-confirm-dark .dg-gift-confirm-status .dg-gift-confirm-success {
+    color: #2ecc71;
+}
+
+.dg-gift-confirm-wrapper.dg-gift-confirm-dark .dg-gift-confirm-status .dg-gift-confirm-error {
+    color: #e74c3c;
+}
+
+/*------------------------------------------------------------------*/
+/*----------------------->>> Theme: Custom <<<----------------------*/
+/*------------------------------------------------------------------*/
+.dg-gift-confirm-wrapper.dg-gift-confirm-custom {
+    /* Custom theme - styles controlled by Elementor */
+    background: transparent;
+}
+
+.dg-gift-confirm-wrapper.dg-gift-confirm-custom.dg-gift-confirm-border {
+    border-color: transparent;
+}
+
+/*------------------------------------------------------------------*/
+/*----------------------->>> Responsive <<<-------------------------*/
+/*------------------------------------------------------------------*/
+@media screen and (max-width: 480px) {
+    .dg-gift-confirm-wrapper {
+        padding: 15px;
+    }
+
+    .dg-gift-confirm-wrapper .dg-gift-confirm-input,
+    .dg-gift-confirm-wrapper .dg-gift-confirm-textarea,
+    .dg-gift-confirm-wrapper .dg-gift-confirm-select {
+        padding: 12px 15px;
+        font-size: 16px; /* Prevent zoom on iOS */
+    }
+
+    .dg-gift-confirm-wrapper .dg-gift-confirm-submit {
+        width: 100%;
+        padding: 14px 20px;
+    }
+}
