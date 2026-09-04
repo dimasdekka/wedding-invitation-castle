@@ -4813,6 +4813,11 @@ var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof H
       document.querySelectorAll('.nama_panggilan_1 .elementor-heading-title, .nama_lengkap_1 .elementor-heading-title').forEach(function (el) {
         el.innerHTML = 'MALIKUL MULKI<br>EFENDHI';
       });
+      // The imported template renders the groom's nickname and full-name widgets
+      // together in the Bride and Groom section; keep one visible to avoid duplication.
+      document.querySelectorAll('.nama_lengkap_1').forEach(function (el) {
+        el.style.display = 'none';
+      });
       document.querySelectorAll('.nama_panggilan_2 .elementor-heading-title, .nama_lengkap_2 .elementor-heading-title').forEach(function (el) {
         el.textContent = 'AMALIA SOFA';
       });
@@ -4860,6 +4865,7 @@ var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof H
     line-height: 1.05 !important;
     white-space: normal !important;
   }
+  .nama_lengkap_1 { display: none !important; }
   .nama_panggilan_1 .elementor-heading-title,
   .nama_panggilan_2 .elementor-heading-title { font-size: clamp(28px, 5vw, 38px) !important; }
   .nama_panggilan_kedua_mempelai .elementor-heading-title,
