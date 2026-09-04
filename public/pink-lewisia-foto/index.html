@@ -4850,7 +4850,7 @@ var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof H
         el.textContent = 'AMALIA SOFA';
       });
       document.querySelectorAll('.nama_panggilan_kedua_mempelai .elementor-heading-title, .nama_panggilan_kedua_mempelai_alt_3 .elementor-heading-title, .nama_panggilan_kedua_mempelai_alt_4 .elementor-heading-title').forEach(function (el) {
-        el.textContent = 'MALIKUL MULKI EFENDHI & AMALIA SOFA';
+        el.innerHTML = 'MALIKUL MULKI<br>EFENDHI<br>&<br>AMALIA SOFA';
       });
       document.querySelectorAll('.nama_panggilan_inisial_1 .elementor-heading-title').forEach(function (el) { el.textContent = 'M'; });
       document.querySelectorAll('.nama_panggilan_inisial_2 .elementor-heading-title').forEach(function (el) { el.textContent = 'A'; });
@@ -4903,6 +4903,14 @@ var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof H
   .nama_panggilan_kedua_mempelai .elementor-heading-title,
   .nama_panggilan_kedua_mempelai_alt_3 .elementor-heading-title,
   .nama_panggilan_kedua_mempelai_alt_4 .elementor-heading-title { font-size: clamp(24px, 4vw, 32px) !important; }
+  .nama_panggilan_kedua_mempelai .elementor-heading-title,
+  .nama_panggilan_kedua_mempelai_alt_3 .elementor-heading-title,
+  .nama_panggilan_kedua_mempelai_alt_4 .elementor-heading-title {
+    font-family: "Cormorant Upright", Georgia, serif !important;
+    font-weight: 400 !important;
+    line-height: 1.08 !important;
+    white-space: normal !important;
+  }
 </style>
 </body>
 </html>
