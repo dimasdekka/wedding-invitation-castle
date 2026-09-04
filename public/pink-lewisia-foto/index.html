@@ -4818,6 +4818,23 @@ var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof H
       document.querySelectorAll('.rek1c .copy-content, .rek2c .copy-content').forEach(function (el) {
         el.style.display = 'block';
       });
+      const giftType = document.querySelector('#form-field-type_gift');
+      if (giftType) {
+        giftType.innerHTML = '<option value="Transfer">QRIS</option>';
+        giftType.value = 'Transfer';
+      }
+      document.querySelectorAll('#confirm1 .elementor-field-group-transfer, #confirm1 .elementor-field-group-rekening, #confirm1 .elementor-field-group-hadiah, #confirm1 .elementor-field-group-pengiriman').forEach(function (el) {
+        el.style.display = 'none';
+      });
+      document.querySelectorAll('#confirm1 .elementor-field-group-type_gift label').forEach(function (el) {
+        el.textContent = 'QRIS';
+      });
+      document.querySelectorAll('#confirm1 .elementor-button-text').forEach(function (el) {
+        el.textContent = 'Konfirmasi';
+      });
+      document.querySelectorAll('.elementor-element-17e872df .elementor-heading-title').forEach(function (el) {
+        el.textContent = 'QRIS';
+      });
       document.querySelectorAll('.nama_panggilan_1 .elementor-heading-title, .nama_lengkap_1 .elementor-heading-title').forEach(function (el) {
         el.innerHTML = 'MALIKUL MULKI<br>EFENDHI';
       });
