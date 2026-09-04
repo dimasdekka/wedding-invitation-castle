@@ -4811,7 +4811,7 @@ var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof H
         footer.remove();
       });
       document.querySelectorAll('.nama_panggilan_1 .elementor-heading-title, .nama_lengkap_1 .elementor-heading-title').forEach(function (el) {
-        el.textContent = 'MALIKUL MULKI EFENDHI';
+        el.innerHTML = 'MALIKUL MULKI<br>EFENDHI';
       });
       document.querySelectorAll('.nama_panggilan_2 .elementor-heading-title, .nama_lengkap_2 .elementor-heading-title').forEach(function (el) {
         el.textContent = 'AMALIA SOFA';
@@ -4851,6 +4851,14 @@ var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof H
     letter-spacing: 0.02em !important;
     line-height: 1.2 !important;
     overflow-wrap: anywhere;
+  }
+  .nama_panggilan_1 .elementor-heading-title,
+  .nama_lengkap_1 .elementor-heading-title {
+    font-family: Georgia, "Times New Roman", serif !important;
+    font-size: clamp(25px, 4.5vw, 34px) !important;
+    letter-spacing: 0.04em !important;
+    line-height: 1.05 !important;
+    white-space: normal !important;
   }
   .nama_panggilan_1 .elementor-heading-title,
   .nama_panggilan_2 .elementor-heading-title { font-size: clamp(28px, 5vw, 38px) !important; }
