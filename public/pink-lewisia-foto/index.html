@@ -4835,6 +4835,18 @@ var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof H
       document.querySelectorAll('.elementor-element-17e872df .elementor-heading-title').forEach(function (el) {
         el.textContent = 'QRIS';
       });
+      const giftConfirmation = document.querySelector('#confirm1');
+      const bankSection = document.querySelector('#amplop');
+      if (giftConfirmation) {
+        const giftPanel = giftConfirmation.closest('.elementor-element-1a377420');
+        if (giftPanel) giftPanel.style.display = 'none';
+      }
+      if (bankSection && !bankSection.querySelector('.local-qris-heading')) {
+        const qrisHeading = document.createElement('div');
+        qrisHeading.className = 'local-qris-heading';
+        qrisHeading.textContent = 'QRIS';
+        bankSection.insertBefore(qrisHeading, bankSection.firstChild);
+      }
       document.querySelectorAll('.nama_panggilan_1 .elementor-heading-title, .nama_lengkap_1 .elementor-heading-title').forEach(function (el) {
         el.innerHTML = 'MALIKUL MULKI<br>EFENDHI';
       });
@@ -4907,6 +4919,16 @@ var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof H
   .nama_lengkap_2 { display: none !important; }
   .konten_rekenig1, .konten_rekenig2 { opacity: 1 !important; visibility: visible !important; }
   .rek1c .copy-content, .rek2c .copy-content { display: block !important; }
+  .local-qris-heading {
+    display: block;
+    width: 100%;
+    margin: 0 0 18px;
+    color: #826569;
+    font-family: "Cormorant Upright", Georgia, serif;
+    font-size: clamp(2rem, 7vw, 3rem);
+    line-height: 1;
+    text-align: center;
+  }
   .nama_panggilan_1 .elementor-heading-title,
   .nama_panggilan_2 .elementor-heading-title { font-size: clamp(28px, 5vw, 38px) !important; }
   .nama_panggilan_kedua_mempelai .elementor-heading-title,
