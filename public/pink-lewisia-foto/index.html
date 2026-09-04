@@ -4810,6 +4810,14 @@ var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof H
       document.querySelectorAll('[data-id="f96178"]').forEach(function (footer) {
         footer.remove();
       });
+      document.querySelectorAll('.konten_rekenig1, .konten_rekenig2, .nama_bank_1, .nama_bank_2, .no_rek_1, .no_rek_2, .atas_nama_1, .atas_nama_2, .rek1c, .rek2c').forEach(function (el) {
+        el.classList.remove('elementor-invisible');
+        el.style.opacity = '1';
+        el.style.visibility = 'visible';
+      });
+      document.querySelectorAll('.rek1c .copy-content, .rek2c .copy-content').forEach(function (el) {
+        el.style.display = 'block';
+      });
       document.querySelectorAll('.nama_panggilan_1 .elementor-heading-title, .nama_lengkap_1 .elementor-heading-title').forEach(function (el) {
         el.innerHTML = 'MALIKUL MULKI<br>EFENDHI';
       });
@@ -4866,6 +4874,8 @@ var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof H
     white-space: normal !important;
   }
   .nama_lengkap_1 { display: none !important; }
+  .konten_rekenig1, .konten_rekenig2 { opacity: 1 !important; visibility: visible !important; }
+  .rek1c .copy-content, .rek2c .copy-content { display: block !important; }
   .nama_panggilan_1 .elementor-heading-title,
   .nama_panggilan_2 .elementor-heading-title { font-size: clamp(28px, 5vw, 38px) !important; }
   .nama_panggilan_kedua_mempelai .elementor-heading-title,
