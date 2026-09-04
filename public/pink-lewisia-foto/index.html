@@ -4810,12 +4810,12 @@ var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof H
       document.querySelectorAll('[data-id="f96178"]').forEach(function (footer) {
         footer.remove();
       });
-      document.querySelectorAll('.konten_rekenig1, .konten_rekenig2, .nama_bank_1, .nama_bank_2, .no_rek_1, .no_rek_2, .atas_nama_1, .atas_nama_2, .rek1c, .rek2c').forEach(function (el) {
+      document.querySelectorAll('.konten_rekenig1, .konten_rekenig2, .konten_rekenig3, .konten_rekenig4, .nama_bank_1, .nama_bank_2, .nama_bank_3, .nama_bank_4, .no_rek_1, .no_rek_2, .no_rek_3, .no_rek_4, .atas_nama_1, .atas_nama_2, .atas_nama_3, .atas_nama_4, .rek1c, .rek2c, .rek3c, .rek4c').forEach(function (el) {
         el.classList.remove('elementor-invisible');
         el.style.opacity = '1';
         el.style.visibility = 'visible';
       });
-      document.querySelectorAll('.rek1c .copy-content, .rek2c .copy-content').forEach(function (el) {
+      document.querySelectorAll('.rek1c .copy-content, .rek2c .copy-content, .rek3c .copy-content, .rek4c .copy-content').forEach(function (el) {
         el.style.display = 'block';
       });
       const giftType = document.querySelector('#form-field-type_gift');
@@ -4847,6 +4847,29 @@ var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof H
         qrisHeading.textContent = 'QRIS';
         bankSection.insertBefore(qrisHeading, bankSection.firstChild);
       }
+      if (bankSection && !bankSection.querySelector('.local-qris-image')) {
+        const qrisImage = document.createElement('img');
+        qrisImage.className = 'local-qris-image';
+        qrisImage.src = '/wp-content/uploads/2025/10/qris-amalia-sofa.jpg';
+        qrisImage.alt = 'QRIS Amalia Sofa';
+        bankSection.insertBefore(qrisImage, bankSection.querySelector('.konten_rekenig1'));
+      }
+      function cloneBankCard(sourceClass, newIndex, logoPath) {
+        if (!bankSection || bankSection.querySelector('.konten_rekenig' + newIndex)) return;
+        const source = bankSection.querySelector('.konten_rekenig' + sourceClass);
+        if (!source) return;
+        const clone = source.cloneNode(true);
+        clone.className = clone.className.replace('konten_rekenig' + sourceClass, 'konten_rekenig' + newIndex);
+        clone.querySelectorAll('[class]').forEach(function (el) {
+          el.className = el.className.replace(new RegExp('_' + sourceClass + '\\b', 'g'), '_' + newIndex).replace('rek' + sourceClass + 'c', 'rek' + newIndex + 'c');
+        });
+        const logo = clone.querySelector('img');
+        if (logo) logo.src = logoPath;
+        const sourceCard = bankSection.querySelector('.konten_rekenig' + sourceClass);
+        sourceCard.parentNode.insertBefore(clone, sourceCard.nextSibling);
+      }
+      cloneBankCard('1', '3', '/wp-content/uploads/2025/10/bank-dana.svg');
+      cloneBankCard('2', '4', '/wp-content/uploads/2025/10/bank-dana.svg');
       document.querySelectorAll('.nama_panggilan_1 .elementor-heading-title, .nama_lengkap_1 .elementor-heading-title').forEach(function (el) {
         el.innerHTML = 'MALIKUL MULKI<br>EFENDHI';
       });
@@ -4871,10 +4894,18 @@ var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof H
         ['.no_rek_1 .elementor-heading-title', '0122583511100'],
         ['.atas_nama_1 .elementor-heading-title', 'Amalia Sofa'],
         ['.nama_bank_2 .elementor-heading-title', 'Bank BRI'],
-        ['.no_rek_2 .elementor-heading-title', '1249580092'],
+        ['.no_rek_2 .elementor-heading-title', '484801012932504'],
         ['.atas_nama_2 .elementor-heading-title', 'Malikul Mulki Efendhi'],
         ['.rek1c .copy-content', '0122583511100'],
-        ['.rek2c .copy-content', '1249580092']
+        ['.rek2c .copy-content', '484801012932504'],
+        ['.nama_bank_3 .elementor-heading-title', 'Dana'],
+        ['.no_rek_3 .elementor-heading-title', '089516896517'],
+        ['.atas_nama_3 .elementor-heading-title', 'Amalia Sofa'],
+        ['.rek3c .copy-content', '089516896517'],
+        ['.nama_bank_4 .elementor-heading-title', 'Dana'],
+        ['.no_rek_4 .elementor-heading-title', '087761547652'],
+        ['.atas_nama_4 .elementor-heading-title', 'Malikul Mulki Efendhi'],
+        ['.rek4c .copy-content', '087761547652']
       ];
       bankDetails.forEach(function (item) {
         document.querySelectorAll(item[0]).forEach(function (el) { el.textContent = item[1]; });
@@ -4928,6 +4959,14 @@ var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof H
     font-size: clamp(2rem, 7vw, 3rem);
     line-height: 1;
     text-align: center;
+  }
+  .local-qris-image {
+    display: block;
+    width: min(88%, 360px);
+    height: auto;
+    margin: 0 auto 24px;
+    border-radius: 16px;
+    box-shadow: 0 8px 22px rgba(70, 45, 48, .18);
   }
   .nama_panggilan_1 .elementor-heading-title,
   .nama_panggilan_2 .elementor-heading-title { font-size: clamp(28px, 5vw, 38px) !important; }

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 120" role="img" aria-label="DANA">
+  <rect width="420" height="120" rx="18" fill="#fff"/>
+  <circle cx="62" cy="60" r="38" fill="#1688e8"/>
+  <path d="M45 44h22c16 0 25 7 25 16s-9 16-25 16H45V44Zm16 10v12h6c7 0 11-2 11-6s-4-6-11-6h-6Z" fill="#fff"/>
+  <text x="116" y="76" fill="#1688e8" font-family="Arial,sans-serif" font-size="54" font-weight="700">DANA</text>
+</svg>
